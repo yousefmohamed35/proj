@@ -77,9 +77,7 @@ class Chat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
-      child: ListView.builder(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+      child: SliverList.builder(
         itemCount: item.length,
         itemBuilder: (context, index) {
           return Container(

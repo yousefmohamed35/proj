@@ -22,10 +22,10 @@ class MassengarScreen extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.only(left: 16,right: 8),
       
-        child: ListView(
-          children: [
-            Searchbar(),
-            Story(),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(child: Searchbar()),
+            SliverToBoxAdapter(child: Story()),
             Chat(),
           ],
         ),
